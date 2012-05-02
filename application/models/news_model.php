@@ -8,11 +8,11 @@ class News_model extends CI_Model {
 
     public function get_news($slug = FALSE) {
         if ($slug === FALSE) {
-            $query = $this->db->get('user');
+            $query = $this->db->get('message');
             return $query->result_array();
         }
 
-        $query = $this->db->get_where('user', array('id' => $slug));
+        $query = $this->db->get_where('message', array('id' => $slug));
         return $query->row_array();
     }
     
@@ -22,12 +22,12 @@ class News_model extends CI_Model {
         $slug = url_title($this->input->post('title'), 'dash', TRUE);
         
         $data = array(
-            'title' => $this->input->post('title'),
-            'slug' => $slug,
-            'text' => $this->input->post('text')
+            'publisher_name' => $this->input->post('title'),
+            'appendix' => $slug,
+            'content' => $this->input->post('text')
         );
        
-        return $this->db->insert('news', data);
+        return $this->db->insert('message', $data);
     }
 
 }

@@ -9,9 +9,9 @@
     <body>
         <?php foreach ($news as $news_item): ?>
 
-            <h2><?php echo $news_item['department'] ?></h2>
+            <h2><?php echo $news_item['id'] ?></h2>
             <div id="main">
-                <?php echo $news_item['nick_name'] ?>
+                <?php echo $news_item['publisher_name'] ?>
             </div>
             <p><a href="news/<?php echo $news_item['id'] ?>">View other user</a></p>
 

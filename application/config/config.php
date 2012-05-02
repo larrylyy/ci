@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://lyy.com/';
+$config['base_url']	= 'http://localhost/CodeIgniter_2.1.0/';
 
 /*
 |--------------------------------------------------------------------------
